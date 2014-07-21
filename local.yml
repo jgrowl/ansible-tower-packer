@@ -1,0 +1,15 @@
+- name: Install ansible tower
+  hosts: all
+  sudo: yes
+
+  tasks:
+  - service: name=syslog-ng state=started
+
+- include: ansible-tower-init/main.yml
+
+- include: ansible-tower/site.yml
+  vars:
+    pg_password: AWsecret
+    admin_password: password
+    rabbitmq_password: "AWXbunnies"
+

@@ -1,0 +1,27 @@
+{
+  "variables": {
+    "repository_url": null 
+  },
+  "builders": [
+    {
+      "type": "docker",
+      "image": "jgrowl/ubuntu-ansible:phusion-baseimage14.04",
+      "export_path": "image.tar"
+    }
+  ],
+  "provisioners": [{
+    "type": "ansible-local",
+    "playbook_file": "local.yml",
+    "playbook_dir": "playbooks"
+  }],
+  "post-processors": [
+        [
+            {
+                "type": "docker-import",
+                "repository": "{{user `repository_url`}}",
+                "tag": "0.1"
+            },
+	    "docker-push"
+        ]
+    ]
+}

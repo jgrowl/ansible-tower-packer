@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  sudo: true
+  #gather_facts: false
+  tasks:
+    - file: path=/etc/my_init.d state=directory
+    - copy: src=files/ansible-tower-init.sh dest=/etc/my_init.d/ansible-tower-init.sh owner=root group=root mode=0744
