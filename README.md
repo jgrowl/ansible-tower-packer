@@ -1,7 +1,7 @@
 ansible-tower-packer
 ====================
 
-Build ansible tower with packer and push image to a registry
+Build ansible tower with packer and push image to a docker registry. Currently only docker post-processors is used.
 
 # Requirements
 
