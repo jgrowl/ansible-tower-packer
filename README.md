@@ -41,6 +41,6 @@ sudo packer build -var-file=variables.json packer.json
 
 # TODO
 
-## Create individual containers for Apache, PostgreSQL, RabbitMQ, etc.
+Create individual containers for Apache, PostgreSQL, RabbitMQ, etc.
 
-## Create script to download and extract ansible tower to correct directory
+Create script to download and extract ansible tower to correct directory
