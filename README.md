@@ -19,11 +19,15 @@ Packer 0.6.1+
 
 ## Change default passwords in local.yml
 
-pg_password: AWsecret
-admin_password: password
-rabbitmq_password: "AWXbunnies"
+`pg_password: AWsecret`
+
+`admin_password: password`
+
+`rabbitmq_password: "AWXbunnies"`
 
 ## Change repository url in variables.json
+
+`"repository_url": "localhost:5000/your_namespace/tower"`
 
 ## Build image 
 
