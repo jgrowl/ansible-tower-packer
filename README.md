@@ -44,3 +44,7 @@ sudo packer build -var-file=variables.json packer.json
 Create individual containers for Apache, PostgreSQL, RabbitMQ, etc.
 
 Create script to download and extract ansible tower to correct directory
+
+# Disclaimer (IANAL)
+
+Ansible Tower is a proprietary product and all rights regarding it belong to Ansible, Inc. They currently allow management up to 10 nodes for free, but anything beyond that requires a license. 
